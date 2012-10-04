@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to DAM</title>
+<link rel="shortcut icon" href="/dam.ico">
+<link rel="bookmark" href="/dam.ico">
+<link rel="StyleSheet" href="/css/comm.css" type="text/css">
+<link rel="StyleSheet" href="/css/subs.css" type="text/css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	  $(document).ready(function(){
+			$("#nav-one li").hover(
+				function(){ $("ul", this).fadeIn("fast"); },
+				function() { }
+			);
+	  	if (document.all) {
+				$("#nav-one li").hoverClass ("sfHover");
+			}
+	  });
+	function getArgs(){ 
+		querystr = window.location.href.split("?")
+		if(querystr[1]){
+		GETs = querystr[1].split("&")
+		GET =new Array()
+			for(i=0;i<GETs.length;i++){
+			tmp_arr = GETs[i].split("=")
+			key=tmp_arr[0]
+			GET[key] = tmp_arr[1]
+			}
+		}
+		return querystr[1];
+	}
+			$.fn.hoverClass = function(c) {
+			return this.each(function(){
+				$(this).hover(
+					function() { $(this).addClass(c);  },
+					function() { $(this).removeClass(c); }
+				);
+			});
+		};
+		var urls=getArgs();
+			$(document).ready(function(){var urls=getArgs();
+			if(!(GET)){var GET=new Array();GET['f']='abt'};
+			self=GET['f'];
+			loader(GET['f']);});
+
+		function loader(str){
+			var query=str.split("/");
+			var temp=query[0].split("_");
+			$('#loadfromjs').load("/"+query[0]+".html");
+			$.getScript("/js/page/"+query[0]+".js");
+			$('.ah'+self).removeClass("select");
+			$('.ah'+temp[0]).addClass("select");
+			var banner_img=document.getElementById('banner_img')
+			banner_img.src='/img/banner_'+temp[0]+'.png';
+			self=temp[0];
+			};
+	
+	</script>
+
+</head>
+
+<body>
+<center>
+<div id="maincontainer">
+<!--banner-->
+	<div class="banner ccabt"><img id='banner_img' class="ban " src="" alt="banner"/>
+        <img class="ban" src="/img/banner_logo.png" usemap="#dam_logo" alt="logo"/>
+     	<a href="/chs/"><img class="ban" src="/img/banner_ti_chs.png" alt="Data Assimilation and Modeling center for Tibetan Plateau"/></a>
+    	<map name="dam_logo"><area alt="logo" shape="circle" coords="40,50,40" href="/img/dam_logo.png"></map>
+    </div>
+<!--banner-->
+<!--mainnavigation-->
+    <div class="navigation">
+   	  <ul id="nav-one">
+  			<li class="ahabt"><a  onclick="loader('abt')">关于DAM</a></li>
+  			<li class="ahne"><a onclick="loader('ne')">新闻动态</a>
+            	<ul class="nav">
+				    <li><a onclick="loader('ne_ne')">新闻</a></li>
+					<li><a onclick="loader('ne_en')">活动</a></li>
+                </ul></li>
+  			<li class="ahppl"><a onclick="loader('ppl')">研究队伍</a>
+            	<ul class="nav">
+				    <li><a onclick="loader('ppl_staf')">教职员</a></li>
+					<li><a onclick="loader('ppl_pdoc')">博士后</a></li>
+					<li><a onclick="loader('ppl_stdn')">研究生</a></li>
+					<li><a onclick="loader('ppl_fmem')">前组员</a></li>
+					<li><a onclick="loader('ppl_collaborator')">合作者</a></li>
+                </ul></li>
+  			<li class="ahrch"><a onclick="loader('rch')">研究方向</a></li>
+  			<li class="ahrs"><a onclick="loader('rs')">资源共享</a>
+            	<ul class="nav">
+				    <li><a onclick="loader('rs_data')">数据</a></li>
+					<li><a onclick="loader('rs_prog')">程序</a></li>
+					<li><a onclick="loader('rs_pres')">报告</a></li>
+                </ul></li>
+  			<li class="ahpb"><a onclick="loader('pb')">发表论著</a></li>
+  			<li style="float:right;"><a class="lang"
+href="/abt/">English</a></li>
+  			<li style="float:right;" class="ahhm"><a href="/chs/">首页</a></li>
+		</ul>
+    </div>
+<!--mainnavigation-->
+<!--contentbody-->
+    <div id="contentBody">
+
+
+
+<div id='loadfromjs'></div>
+
+<!--以下为子网页公共代码，请在上文添加具体子网页内容-->
+
+﻿    </div>
+<!--contentbody-->
+    <div class="bottomline"><br /></div>
+
+	<div class="footer">
+	<span style="padding:1em 2em;float:left;">
+		<a href="http://www.itpcas.ac.cn" target="_blank">中国科学院青藏高原研究所</a>
+<span style="padding:0 1em;color:#666666;">今日访问量：N/a</span><span style="padding:0 1em;color:#666666;">总访问量：N/a</span>		</span>
+	<span style="padding:1em 2em;float:right;">&copy;2011-2015 | Themes designed by Kelly &amp; <a href="/maputo">Maputo<a> |
+  	<a href="mailto:linchg@itpcas.ac.cn">Contact us</a></span></div>
+
+</div>
+<div style="width:960px"><img src="/img/mct_b.png" alt="footer"/></div>
+
+</center>
+</body>
+</html>
