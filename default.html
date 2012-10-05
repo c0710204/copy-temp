@@ -53,11 +53,17 @@
 			$.getScript("/js/page/"+query[0]+".js");
 			$('.ah'+self).removeClass("select");
 			$('.ah'+temp[0]).addClass("select");
+			$('.banner').removeClass("cc"+self);
+			$('.banner').addClass("cc"+temp[0]);
 			var banner_img=document.getElementById('banner_img')
 			banner_img.src='/img/banner_'+temp[0]+'.png';
 			self=temp[0];
 			};
-	
+		function loadlist(){
+			
+			};
+		function loadrow({
+			};
 	</script>
 
 </head>
