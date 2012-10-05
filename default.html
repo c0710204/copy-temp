@@ -51,7 +51,7 @@
 			var temp=query[0].split("_");
 			$('#loadfromjs').load("/"+query[0]+".html");
 
-			$.getScript("/js/page/"+query[0]+".js");
+			
 			$('.ah'+self).removeClass("select");
 			$('.ah'+temp[0]).addClass("select");
 			$('.banner').removeClass('cc'+self);
@@ -59,6 +59,8 @@
 			var banner_img=document.getElementById('banner_img')
 			banner_img.src='/img/banner_'+temp[0]+'.png';
 			self=temp[0];
+			$.getScript("/js/page/"+query[0]+".js");
+
 			};
 		function loadrow(place,input,demo)
 		{
@@ -66,11 +68,15 @@
 			row.attr("id","rowtemp");
 			row.removeClass("hidden");
 			$('#'+place).before(row);
-			for (var attr in input)
+			strhtml=$('#rowtemp').html(); 
+			
+			for (var attr in input.htmls)
 			{
-				$('div#rowtemp div#'+attr).html(input[attr]);
+				//$('#rowtemp #'+attr).html(input.htmls[attr]);
+				strhtml=strhtml.replace('#'+attr+'#',input.htmls[attr]);
 				//alert(input[attr]);
 			}
+			$('#rowtemp').html(strhtml);
 			$('#rowtemp').attr("id","row");
 		}
 		function loadsqu(place,input,demo)
