@@ -1,0 +1,44 @@
+[
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"4","headpic":"/img/ppl/cheny_64.jpg","headpicalt":"","name":"陈莹莹"},
+	{"id":"5","headpic":"/img/ppl/mamtimina_64.jpg","headpicalt":"","name":"艾力·买买提明"},
+	{"id":"3","headpic":"/img/ppl/niux_64.jpg","headpicalt":"","name":"牛晓蕾"},
+	{"id":"2","headpic":"/img/ppl/qinj_64.jpg","headpicalt":"","name":"秦军"},
+	{"id":"1","headpic":"/img/ppl/yangk_64.jpg","headpicalt":"","name":"阳坤"}
+	],
+	"attr":{"squhref":"staf","squname":"教职员"}
+	},
+
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"21","headpic":"/img/ppl/tangw_64.jpg","headpicalt":"","name":"唐文君"}
+	],
+	"attr":{"squhref":"pdoc","squname":"博士后"}
+	},
+
+
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"24","headpic":"/img/ppl/dingb_64.jpg","headpicalt":"","name":"丁宝弘"},
+	{"id":"26","headpic":"/img/ppl/hanm_64.jpg","headpicalt":"","name":"韩孟磊"},
+	{"id":"27","headpic":"/img/ppl/lazhu_64.jpg","headpicalt":"","name":"拉珠"},
+	{"id":"25","headpic":"/img/ppl/linc_64.jpg" ,"headpicalt":"","name":"林长贵"},
+	{"id":"23","headpic":"/img/ppl/wuh_64.jpg" ,"headpicalt":"","name":"吴辉"},
+	{"id":"22","headpic":"/img/ppl/zhaol_64.jpg","headpicalt":"","name":"赵龙"}
+	],
+	"attr":{"squhref":"stdn","squname":"研究生"}
+	},
+
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"31","headpic":"/img/ppl/guox_64.jpg" ,"headpicalt":"","name":"郭晓峰"},
+	{"id":"32","headpic":"/img/ppl/hej_64.jpg" ,"headpicalt":"","name":"何杰"}
+	],
+	"attr":{"squhref":"staf","squname":"教职员"}
+	}
+]

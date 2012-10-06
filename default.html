@@ -9,7 +9,9 @@
 <link rel="StyleSheet" href="/css/subs.css" type="text/css">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript">
-	
+
+		GET =new Array();
+		GET;
 	  $(document).ready(function(){
 			$("#nav-one li").hover(
 				function(){ $("ul", this).fadeIn("fast"); },
@@ -19,37 +21,40 @@
 				$("#nav-one li").hoverClass ("sfHover");
 			}
 	  });
-	function getArgs(){ 
-		querystr = window.location.href.split("?")
-		if(querystr[1]){
-		GETs = querystr[1].split("&")
-		GET =new Array()
-			for(i=0;i<GETs.length;i++){
-			tmp_arr = GETs[i].split("=")
-			key=tmp_arr[0]
-			GET[key] = tmp_arr[1]
-			}
+	 //******************************
+	function getArgs(){
+		var args = {};
+		var match = null;
+		var search = decodeURIComponent(location.search.substring(1));
+		var reg = /(?:([^&amp;]+)=([^&amp;]+))/g;
+		while((match = reg.exec(search))!==null){
+			args[match[1]] = match[2];
 		}
-		return querystr[1];
+		return args;
+	
 	}
-			$.fn.hoverClass = function(c) {
-			return this.each(function(){
-				$(this).hover(
-					function() { $(this).addClass(c);  },
-					function() { $(this).removeClass(c); }
-				);
-			});
-		};
-		var urls=getArgs();
-			$(document).ready(function(){var urls=getArgs();
-			if(!(GET)){var GET=new Array();GET['f']='abt'};
-			self=GET['f'];
-			loader(GET['f']);});
+	//************************
+	$.fn.hoverClass = function(c) {
+		return this.each(function(){
+		$(this).hover(
+			function() { $(this).addClass(c);  },
+			function() { $(this).removeClass(c); }
+			);
+		});
+	};
+	//***********************************
+
+
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+
 
 		function loader(str){
 			var query=str.split("/");
 			var temp=query[0].split("_");
-			$('#loadfromjs').load("/"+query[0]+".html");
+			$('#loadfromjs').load("/"+query[0]+".html",function(){
 
 			
 			$('.ah'+self).removeClass("select");
@@ -59,7 +64,7 @@
 			var banner_img=document.getElementById('banner_img')
 			banner_img.src='/img/banner_'+temp[0]+'.png';
 			self=temp[0];
-			$.getScript("/js/page/"+query[0]+".js");
+			$.getScript("/js/page/"+query[0]+".js");});
 
 			};
 		function loadrow(place,input,demo)
@@ -70,11 +75,14 @@
 			$('#'+place).before(row);
 			strhtml=$('#rowtemp').html(); 
 			
-			for (var attr in input.htmls)
+			for (var attr in input)
 			{
+
 				//$('#rowtemp #'+attr).html(input.htmls[attr]);
-				strhtml=strhtml.replace('#'+attr+'#',input.htmls[attr]);
-				//alert(input[attr]);
+				var strev="strhtml=strhtml.replace(/\\$"+attr+"\\#/g,input[attr]);";
+				alert(strev);
+				//strhtml=strhtml.replace('$'+attr+'#',input[attr]);
+				eval(strev);
 			}
 			$('#rowtemp').html(strhtml);
 			$('#rowtemp').attr("id","row");
@@ -85,14 +93,39 @@
 			squ.attr("id","squtemp");
 			squ.removeClass("hidden");
 			$('#'+place).before(squ);
+			strhtml=$('#squtemp').html(); 
+			for (var attr in input.attr)
+			{
+
+				//$('#rowtemp #'+attr).html(input.htmls[attr]);
+				var strev="strhtml=strhtml.replace(/\\$"+attr+"\\#/g,input.attr[attr]);";
+				//strhtml=strhtml.replace('$'+attr+'#',input.attr[attr]);
+				eval(strev);
+				//alert(attr+'|'+input[attr]);
+			}
+			$('#squtemp').html(strhtml);
 			for (attr in input.rows)
 			{
 				loadrow(input.demo,input.rows[attr],input.demo);
 			}
 			$('#squtemp').attr("id","squ");		
+			$('#'+input.demo).addClass('hidden')
 			$('#'+input.demo).attr("id","rowdemoused");
 		}
-
+		function work(json,main)
+		{
+				if(!(arguments[1]))main='squ1demo';
+			//	var data='[{"demo":"row1demo",	"rows":[{"attr1":"a"},{"attr1":"b"}]},{"demo":"row1demo",	"rows":[{"attr1":"a"},{"attr1":"b"}]}]';
+				 data=$.getJSON("/js/data/"+json+".json",function(data){
+				
+			for(var squrow in data){
+			loadsqu(main,data[squrow],main);}});
+			// var data = eval('(' + data + ')');
+		}
+			$(document).ready(function(){var urls=getArgs();
+			if(!(urls['f'])){urls['f']='abt'};
+			self=urls['f'];
+			loader(urls['f']);});
 	</script>
 
 </head>
@@ -153,7 +186,7 @@ href="/abt/">English</a></li>
 
 	<div class="footer">
 	<span style="padding:1em 2em;float:left;">
-		<a href="http://www.itpcas.ac.cn" target="_blank">中国科学院青藏高原研究所</a>
+		<a href="http://www.itpcas.ac.cn" target="_blank">多元气象数据融合和同化</a>
 <span style="padding:0 1em;color:#666666;">今日访问量：N/a</span><span style="padding:0 1em;color:#666666;">总访问量：N/a</span>		</span>
 	<span style="padding:1em 2em;float:right;">&copy;2011-2015 | Themes designed by Kelly &amp; <a href="/maputo">Maputo<a> |
   	<a href="mailto:linchg@itpcas.ac.cn">Contact us</a></span></div>
