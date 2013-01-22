@@ -2,11 +2,11 @@
 	{"demo":"row1demo",
 	"rows":
 	[
-	{"id":"4","headpic":"/img/ppl/cheny_64.jpg","headpicalt":"","name":"陈莹莹"},
-	{"id":"5","headpic":"/img/ppl/mamtimina_64.jpg","headpicalt":"","name":"艾力·买买提明"},
-	{"id":"3","headpic":"/img/ppl/niux_64.jpg","headpicalt":"","name":"牛晓蕾"},
-	{"id":"2","headpic":"/img/ppl/qinj_64.jpg","headpicalt":"","name":"秦军"},
-	{"id":"1","headpic":"/img/ppl/yangk_64.jpg","headpicalt":"","name":"阳坤"}
+	{"id":"4","headpic":"/img/ppl/cheny_64.jpg","headpicalt":"","name":"朱晨"},
+	{"id":"5","headpic":"/img/ppl/mamtimina_64.jpg","headpicalt":"","name":"庄媛"},
+	{"id":"3","headpic":"/img/ppl/niux_64.jpg","headpicalt":"","name":"333"},
+	{"id":"2","headpic":"/img/ppl/qinj_64.jpg","headpicalt":"","name":"222"},
+	{"id":"1","headpic":"/img/ppl/yangk_64.jpg","headpicalt":"","name":"111"}
 	],
 	"attr":{"squhref":"staf","squname":"教职员"}
 	},

@@ -69,23 +69,23 @@ window.onerror = killerrors;
 			};
 		function loadrow(place,input,demo)
 		{
-			var row=$('#'+demo).clone();
+			var row=$('#squtemp #'+demo).clone();
 			row.attr("id","rowtemp");
 			row.removeClass("hidden");
-			$('#'+place).before(row);
-			strhtml=$('#rowtemp').html(); 
+			$('#squtemp #'+place).before(row);
+			strhtml=$('#squtemp #rowtemp').html(); 
 			
 			for (var attr in input)
 			{
 
 				//$('#rowtemp #'+attr).html(input.htmls[attr]);
 				var strev="strhtml=strhtml.replace(/\\$"+attr+"\\#/g,input[attr]);";
-				alert(strev);
+				//alert(strev);
 				//strhtml=strhtml.replace('$'+attr+'#',input[attr]);
 				eval(strev);
 			}
-			$('#rowtemp').html(strhtml);
-			$('#rowtemp').attr("id","row");
+			$('#squtemp #rowtemp').html(strhtml);
+			$('#squtemp #rowtemp').attr("id","row");
 		}
 		function loadsqu(place,input,demo)
 		{
@@ -101,7 +101,7 @@ window.onerror = killerrors;
 				var strev="strhtml=strhtml.replace(/\\$"+attr+"\\#/g,input.attr[attr]);";
 				//strhtml=strhtml.replace('$'+attr+'#',input.attr[attr]);
 				eval(strev);
-				//alert(attr+'|'+input[attr]);
+				//`(attr+'|'+input[attr]);
 			}
 			$('#squtemp').html(strhtml);
 			for (attr in input.rows)

@@ -1,0 +1,40 @@
+[
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"CMFD_0.1","intro":"中国区域地面气象要素驱动数据集(空间分辨率0.1°，时间分辨率3h)"},
+	{"id":"CMFE_0.25","intro":"中国区域地面气象要素驱动数据集(空间分辨率0.25°，时间分辨率3h)"},
+	{"id":"rad_daily","intro":"地表向下短波日辐射值"}
+
+	],
+	"attr":{"squintro":"中心发展了一些常用的数据集，如中国高分辨率陆面过程驱动数据、中国辐射数据等。这些数据集已公开，可供基础研究使用，但严禁用于商业目的。","squname":"数据","squkind":"data"}
+	},
+	{"demo":"row1demo",
+	"rows":
+	[
+	{"id":"soil_heat_flux","intro":"利用土壤温湿资料计算土壤热通量"},
+	{"id":"flux_parameterization","intro":"裸地表面通量参数化方案"},
+	{"id":"hybrid_radiation_model","intro":"利用地表资料计算太阳辐射的通用程序"}
+
+	],
+	"attr":{"squintro":"我们发展了一些水文气象分析中常用的程序与你分享（仅限于基础研究使用）。","squname":"程序","squkind":"prog"}
+	},
+	{"demo":"row2demo",
+	"rows":
+	[
+{"name":"Aiguo Dai","time":"2012-07-20","href":"/press/Dai_Drought-ITPR.pdf","intro":"Increasing Drought under Global Warming"},
+{"name":"介民 王","time":"2012-05-25","href":"/press/Wang-ITP-25May2012-涡动相关通量计算及三种主要软件的比较分析.pdf","intro":"涡动相关通量计算及三种主要软件的比较分析"},
+{"name":"介民 王","time":"2012-05-25","href":"/press/Wang-ITP-25May2012-湍流通量计算及其不确定性研究的新进展.pdf","intro":"湍流通量计算及其不确定性研究的新进展"}
+	],
+	"attr":{"squintro":"中心来访科学家所做报告在其同意下供大家分享。","squname":"报告","squkind":"pres"}
+	},
+		{"demo":"row2demo",
+	"rows":
+	[
+{"name":"Aiguo Dai","time":"2012-07-20","href":"/press/Dai_Drought-ITPR.pdf","intro":"Increasing Drought under Global Warming"},
+{"name":"介民 王","time":"2012-05-25","href":"/press/Wang-ITP-25May2012-涡动相关通量计算及三种主要软件的比较分析.pdf","intro":"涡动相关通量计算及三种主要软件的比较分析"},
+{"name":"介民 王","time":"2012-05-25","href":"/press/Wang-ITP-25May2012-湍流通量计算及其不确定性研究的新进展.pdf","intro":"湍流通量计算及其不确定性研究的新进展"}
+	],
+	"attr":{"squintro":"中心来访科学家所做报告在其同意下供大家分享。","squname":"报告","squkind":"pres"}
+	}
+]
