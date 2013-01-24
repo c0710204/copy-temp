@@ -1,9 +1,1 @@
-[{"demo":"row1demo",
-"rows":
-[
-{"href":"2","title":"课题组会","time":"2012-09-28"},
-{"href":"6","title":"来自段青云教授的学术报告","time":"2012-09-28"},
-{"href":"4","title":"博士论文答辩","time":"2012-05-11"}
-]
-
-}]
+[{"demo":"row1demo","rows":[{"href":"2","title":"\u8bfe\u9898\u7ec4\u4f1a","time":"2012-09-28"},{"href":"4","title":"\u535a\u58eb\u8bba\u6587\u7b54\u8fa9","time":"2012-05-11"},{"href":"6","title":"\u6765\u81ea\u6bb5\u9752\u4e91\u6559\u6388\u7684\u5b66\u672f\u62a5\u544a","time":"2012-09-28"}]}]
