@@ -1,3 +1,9 @@
+#ne_ned #squ {
+	z-index:500;
+}
+
+
+
 .sidenav {
 	background:url(../img/side.png) left top no-repeat;
 	overflow:hidden;
@@ -118,7 +124,6 @@
 
 .ct-text .intext .ti {
 	padding: 3px 0px 3px 0px;
-	background: #fffff3;
 	width: auto;
 	font-size: 16px;
 	font-weight: bold;
@@ -225,7 +230,6 @@ div.ph img {
 
 div.inf {
 	width:450px;
-	float:left;
 }
 
 div.inf p {

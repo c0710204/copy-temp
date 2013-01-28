@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="ct-ttb">
+        <span class="ti ccl-pb">
+            发表论著
+        </span>
+    </div>
+    <div class="ct-text">
+        <div class="intext">
+            <div class="ti">
+                <span class="ccl-pb">
+                    关于
+                    <span id="topic">
+                        $topic#
+                    </span>
+                    的文章
+                </span>
+            </div>
+        </div>
+        <br clear="all" />
+        <div id="squ2demo" class='hidden'>
+            <b style="color:black; font-family:Arial, Helvetica, sans-serif">
+                $level#
+            </b>
+            <ol>
+                <li id="row1demo">
+                    $title#
+                    <a class="pb" href="/pdf/$link#" style='display:$havepdf#'>
+                        [PDF]
+                    </a>
+                    <span class="eng">
+                        [Highlight]
+                    </span>
+                    <span class="chs">
+                        [要点]
+                    </span>
+                    <div class="eng">
+                        <p>
+                            $intro-en#
+                        </p>
+                    </div>
+                    <div class="chs">
+                        <p>
+                            $intro-ch#
+                        </p>
+                    </div>
+                </li>
+            </ol>
+            <br/>
+        </div>
+    </div>
+</div>
+<!-- sidebar -->
+<div class="sidenav">
+    <div class="ct-ttb">
+        <span class="ti ccl-pb">
+            前往…
+        </span>
+    </div>
+    <div id="squ1demo" class='hidden'>
+        <ul>
+            <li id="row1demo" class='hidden'>
+                <div id='$topic#'>
+                    <a href="?f=pb_list&id=$topic#" class="ccd-pb">
+                        $topic#
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

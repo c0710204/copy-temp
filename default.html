@@ -26,7 +26,7 @@
 		var args = {};
 		var match = null;
 		var search = decodeURIComponent(location.search.substring(1));
-		var reg = /(?:([^&amp;]+)=([^&amp;]+))/g;
+		var reg = /(?:([^&;]+)=([^&;]+))/g;
 		while((match = reg.exec(search))!==null){
 			args[match[1]] = match[2];
 		}
@@ -109,18 +109,25 @@ window.onerror = killerrors;
 				loadrow(input.demo,input.rows[attr],input.demo);
 			}
 			$('#squtemp').attr("id","squ");		
-			$('#'+input.demo).addClass('hidden')
-			$('#'+input.demo).attr("id","rowdemoused");
+			$('#squ #'+input.demo).addClass('hidden')
+			$('#squ #'+input.demo).attr("id","rowdemoused");
 		}
-		function work(json,main)
+		function work(json,main,next)
 		{
 				if(!(arguments[1]))main='squ1demo';
-			//	var data='[{"demo":"row1demo",	"rows":[{"attr1":"a"},{"attr1":"b"}]},{"demo":"row1demo",	"rows":[{"attr1":"a"},{"attr1":"b"}]}]';
-				 data=$.getJSON("/js/data/"+json+".json",function(data){
+				if(!(arguments[2]))next=function(){};
 				
-			for(var squrow in data){
-			loadsqu(main,data[squrow],main);}});
+				 data=$.getJSON(
+					"/js/data/"+json+".json",
+					function(data){
+						for(var squrow in data){
+							loadsqu(main,data[squrow],main);
+							}
+						next();
+						}
+					);
 			// var data = eval('(' + data + ')');
+			
 		}
 			$(document).ready(function(){var urls=getArgs();
 			if(!(urls['f'])){urls['f']='abt'};
@@ -155,7 +162,7 @@ window.onerror = killerrors;
 					<li><a onclick="loader('ppl_pdoc')">博士后</a></li>
 					<li><a onclick="loader('ppl_stdn')">研究生</a></li>
 					<li><a onclick="loader('ppl_fmem')">前组员</a></li>
-					<li><a onclick="loader('ppl_collaborator')">合作者</a></li>
+					<li><a onclick="loader('ppl')">合作者</a></li>
                 </ul></li>
   			<li class="ahrch"><a onclick="loader('rch')">研究方向</a></li>
   			<li class="ahrs"><a onclick="loader('rs')">资源共享</a>
