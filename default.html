@@ -31,7 +31,7 @@
 			args[match[1]] = match[2];
 		}
 		return args;
-	
+
 	}
 	//************************
 	$.fn.hoverClass = function(c) {
@@ -45,10 +45,10 @@
 	//***********************************
 
 
-function killerrors() { 
-return true; 
-} 
-window.onerror = killerrors; 
+function killerrors() {
+return true;
+}
+window.onerror = killerrors;
 
 
 		function loader(str){
@@ -56,7 +56,7 @@ window.onerror = killerrors;
 			var temp=query[0].split("_");
 			$('#loadfromjs').load("/"+query[0]+".html",function(){
 
-			
+
 			$('.ah'+self).removeClass("select");
 			$('.ah'+temp[0]).addClass("select");
 			$('.banner').removeClass('cc'+self);
@@ -73,8 +73,8 @@ window.onerror = killerrors;
 			row.attr("id","rowtemp");
 			row.removeClass("hidden");
 			$('#squtemp #'+place).before(row);
-			strhtml=$('#squtemp #rowtemp').html(); 
-			
+			strhtml=$('#squtemp #rowtemp').html();
+
 			for (var attr in input)
 			{
 
@@ -93,7 +93,7 @@ window.onerror = killerrors;
 			squ.attr("id","squtemp");
 			squ.removeClass("hidden");
 			$('#'+place).before(squ);
-			strhtml=$('#squtemp').html(); 
+			strhtml=$('#squtemp').html();
 			for (var attr in input.attr)
 			{
 
@@ -108,7 +108,7 @@ window.onerror = killerrors;
 			{
 				loadrow(input.demo,input.rows[attr],input.demo);
 			}
-			$('#squtemp').attr("id","squ");		
+			$('#squtemp').attr("id","squ");
 			$('#squ #'+input.demo).addClass('hidden')
 			$('#squ #'+input.demo).attr("id","rowdemoused");
 		}
@@ -116,7 +116,7 @@ window.onerror = killerrors;
 		{
 				if(!(arguments[1]))main='squ1demo';
 				if(!(arguments[2]))next=function(){};
-				
+
 				 data=$.getJSON(
 					"/js/data/"+json+".json",
 					function(data){
@@ -127,7 +127,7 @@ window.onerror = killerrors;
 						}
 					);
 			// var data = eval('(' + data + ')');
-			
+
 		}
 			$(document).ready(function(){var urls=getArgs();
 			if(!(urls['f'])){urls['f']='abt'};
@@ -141,14 +141,14 @@ window.onerror = killerrors;
 <center>
 <div id="maincontainer">
 <!--banner-->
-	<div class="banner ccabt"><img id='banner_img' class="ban " src="" alt="banner"/>
+	<div class="banner ccabt hidden"><img id='banner_img' class="ban " src="" alt="banner"/>
         <img class="ban" src="/img/banner_logo.png" usemap="#dam_logo" alt="logo"/>
      	<a href="/chs/"><img class="ban" src="/img/banner_ti_chs.png" alt="Data Assimilation and Modeling center for Tibetan Plateau"/></a>
     	<map name="dam_logo"><area alt="logo" shape="circle" coords="40,50,40" href="/img/dam_logo.png"></map>
     </div>
 <!--banner-->
 <!--mainnavigation-->
-    <div class="navigation">
+    <div class="navigation hidden">
    	  <ul id="nav-one">
   			<li class="ahabt"><a  onclick="loader('abt')">关于DAM</a></li>
   			<li class="ahne"><a onclick="loader('ne')">新闻动态</a>
@@ -187,15 +187,15 @@ href="/abt/">English</a></li>
 
 <!--以下为子网页公共代码，请在上文添加具体子网页内容-->
 
-﻿    </div>
+    </div>
 <!--contentbody-->
     <div class="bottomline"><br /></div>
 
 	<div class="footer">
 	<span style="padding:1em 2em;float:left;">
-		<a href="http://www.itpcas.ac.cn" target="_blank">多元气象数据融合和同化</a>
+		<a href="http://www.itpcas.ac.cn" target="_blank">吴淼</a>
 <span style="padding:0 1em;color:#666666;">今日访问量：N/a</span><span style="padding:0 1em;color:#666666;">总访问量：N/a</span>		</span>
-	<span style="padding:1em 2em;float:right;">&copy;2011-2015 | Themes designed by Kelly &amp; <a href="/maputo">Maputo<a> |
+	<span style="padding:1em 2em;float:right;">&copy;2011-2015 | Themes designed by 吴淼 |
   	<a href="mailto:linchg@itpcas.ac.cn">Contact us</a></span></div>
 
 </div>

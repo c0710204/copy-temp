@@ -1,0 +1,32 @@
+[
+{
+  "demo":"row1demo",
+  "attr":{
+   "rowid":"日常办公"
+   },
+   "rows":[
+   {
+    "name":"日程管理",
+    "id":"8",
+	"url":"http://日常办公"
+   },
+   {
+    "name":"人员管理",
+    "id":"9",
+	"url":"http://人员管理"
+   }
+  ]
+ },
+ {
+  "demo":"row1demo",
+  "attr":{
+   "rowid":"行政审批"
+   }
+ },
+ {
+  "demo":"row1demo",
+  "attr":{
+   "rowid":"系统管理"
+   }
+ }
+]
