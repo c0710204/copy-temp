@@ -1,0 +1,358 @@
+.sidenav {
+	background:url(../img/side.png) left top no-repeat;
+	overflow:hidden;
+	position:relative;
+	width:225px;
+	float:left;
+	margin-bottom:5px;
+	margin-right:8px;
+}
+
+.sidenav ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	border-top:solid 3px #fff;
+	clear: both;
+}
+
+.sidenav ul li:hover {
+	background:#666666;
+}
+
+.sidenav ul li a {
+	font-size:14px;
+	padding:2px 16px;
+	display:block;
+}
+
+.sidenav ul li a.at {
+	cursor:default;
+}
+
+.sidenav ul li a.at:hover {
+	text-decoration:none;;
+}
+/* six container */
+.container {
+	background:url(../img/ct.png) right top no-repeat;
+	overflow: hidden;
+	position: relative;
+	width: 675px;
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+/* six container */
+
+/* titlebar */
+.ct-ttb {
+	height: 30px;
+	margin:0;
+}
+
+.container .ct-ttb .ti {
+	padding: 0px 6px 3px 24px;
+	background: url(../img/tib.png);
+	width: auto;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	float:right;
+}
+
+.sidenav .ct-ttb .ti {
+	padding: 0px 24px 3px 6px;
+	background: url(../img/tib_s.png) right top no-repeat;
+	width: auto;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	float:left;
+}
+
+.ct-ttb a {
+  text-decoration: none;
+}
+
+.ct-ttb a:hover {
+	color:#e60000;
+	text-decoration:underline;
+}
+
+.ct-ttb img {
+	float:right;
+}
+/* titlebar */
+
+/* text */
+.ct-text {
+	overflow: hidden;
+	color: black;
+	width: 675px;
+	position: relative;
+	font-size: 12px;
+	font-family:Times, "Times New Roman", Georgia, "������", "����", serif;
+	margin-bottom:8px;
+/*	border-bottom:solid 1px #666666; */
+}
+
+.ct-text a:hover {
+	color:#ee4422;
+}
+
+.ct-text .intext{
+	display: block;
+	padding: 0 24px 0 24px;
+	text-align: justify;
+	border-top:3px solid #fff;
+	margin-bottom:16px;
+	line-height:150%;
+}
+
+.ct-text .intext img.p{
+	float: left;
+	margin:4px 24px 8px 0px;
+	border:solid 4px #aabbbb;
+}
+
+.ct-text .intext .ti {
+	padding: 3px 0px 3px 0px;
+	background: #cccc20;
+	width: auto;
+	font-size: 16px;
+	font-weight: bold;
+	font-family:Arial, "΢���ź�", "����", Helvetica, sans-serif;
+	display: block;
+	float:left;
+}
+
+.ct-text .intext .ti a:hover {
+	color:#693838;
+	text-decoration:underline;
+}
+
+.ct-text .intext .subti{
+	padding: 1px 6px 1px 6px;
+	border-top:1px solid rgba(153, 153, 153, 0.54);
+	color:#666666;
+	width: auto;
+	font-size: 12px;
+	display: block;
+	float:left;
+}
+
+.ct-text .intext a.readmore{
+	color:#fffff2;
+}
+
+.ct-text .intext ul {
+	padding: 0 0 0 16px;
+}
+
+.ct-text .intext ul li {
+	/*list-style: url(../img/list_r.png);*/
+	font-size: 12px;
+	line-height: normal;
+	text-align: justify;
+	padding-top:8px;
+	clear: both;
+}
+
+.ct-text .intext ul li.ppl {
+	border-bottom:1px dotted #999999;
+	list-style: none;
+	text-align: justify;
+	font-size: 12px;
+	line-height: normal;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+.ct-text .intext ul li.ppl img {
+	width:64px;
+	height:64px;
+	border: 2px solid #aabbbb;
+	margin-right:16px;
+	float: left;
+}
+
+.ct-text .intext ul li.ppl div.ppl {
+	float:left;
+	width:512px;
+}
+
+div.ppls {
+	font-family:Arial, "΢���ź�", "����", Helvetica, sans-serif;
+	float:left;
+	width:108px;
+	margin:4px;
+	text-align:center;
+	overflow:hidden;
+}
+
+div.ppls a{
+	display:block;
+	padding:4px 0 4px 0;
+}
+
+div.ppls img {
+	height: 64px;
+	border: 2px solid #aabbbb;
+}
+/* text */
+
+/* image */
+.ct-img {
+	border: none;
+	overflow: hidden;
+	position: relative;
+	width: 675px;
+	text-align: center;
+}
+/* image */
+
+/* div for individual */
+div.ph {
+	float:left;
+}
+
+div.ph img {
+	border: 4px solid #aabbbb;
+	height:200px;
+	margin: 12px 12px 0 0px;
+}
+
+div.inf {
+	width:450px;
+	float:left;
+}
+
+div.inf p {
+	text-align:left;
+	padding: 0;
+}
+
+.nm {
+	font-family:Times, "Times New Roman", Georgia, "������", "����", serif;
+	font-weight:bold;
+	line-height:normal;
+}
+
+ol li {
+	clear:both;
+}
+
+li em {
+	font-weight:bold;
+	color:#992299;
+	font-family:Arial, "΢���ź�", "����", Helvetica, sans-serif;
+}
+
+a.pb {
+	float:right;
+	background:#66b0ad;
+	padding:0 12px 0 12px;
+}
+
+.panel {
+	display:none;
+}
+
+.flip {
+	cursor:default;
+}
+/* div for individual */
+
+/* table for Events*/
+table {
+	border:0
+}
+
+table.ev {
+	width:100%;
+	border:solid 2px #181d4b;
+	border-collapse:collapse;
+	margin-top:24px;
+}
+
+table.ev th {
+	width:20%;
+	text-align:right;
+}
+
+table.ev th *{
+	padding-right:8px;
+}
+
+table.ev td {
+	width:80%;
+}
+
+table.ev td.ev {
+	background:#a2d0ec;
+}
+
+table.ev tr,
+table.ev td,
+table.ev th {
+	border:solid 1px #181d4b;
+	border-collapse:collapse;
+	padding:6px 12px 6px 12px;
+	vertical-align:middle;
+}
+/* table for Events */
+
+/* table for Resources */
+table.rs {
+	border:solid 2px #acac55;
+	border-collapse:collapse;
+	margin-top:24px;
+}
+
+table.rs tr,
+table.rs td,
+table.rs th {
+	border:solid 1px #acac55;
+	border-collapse:collapse;
+	padding:3px 12px 2px 12px;
+	vertical-align:middle;
+}
+
+table.rs th.total {
+	background:#e4e49d;
+}
+/* table for Resources */
+
+/* table for Publications */
+table.pb td {
+	padding:3px 12px 2px 12px;
+	vertical-align:middle;
+}
+/* table for Publications */
+
+/* highlight in Publications */
+span.eng, span.chs {
+	float:right;
+	color:#eeee77;
+	background:#66b0ad;
+	cursor:default;
+	padding:0 12px 0 12px;
+}
+
+div.eng, div.chs {
+	clear:both;
+	padding:3px 12px 2px 36px;
+	display:none;
+}
+
+div.eng {
+	background:url(../img/hili_b.png) left bottom no-repeat;
+
+}
+
+div.chs {
+	background:url(../img/hili_t.png) left top no-repeat;
+
+}
+/* highlight in Publications */

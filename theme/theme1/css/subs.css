@@ -92,7 +92,7 @@
 	width: 675px;
 	position: relative;
 	font-size: 12px;
-	font-family:Times, "Times New Roman", Georgia, "ĞÂËÎÌå", "ËÎÌå", serif;
+	font-family:Times, "Times New Roman", Georgia, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", serif;
 	margin-bottom:8px;
 /*	border-bottom:solid 1px #666666; */
 }
@@ -122,7 +122,7 @@
 	width: auto;
 	font-size: 16px;
 	font-weight: bold;
-	font-family:Arial, "Î¢ÈíÑÅºÚ", "ºÚÌå", Helvetica, sans-serif;
+	font-family:Arial, "Î¢ï¿½ï¿½ï¿½Åºï¿½", "ï¿½ï¿½ï¿½ï¿½", Helvetica, sans-serif;
 	display: block;
 	float:left;
 }
@@ -183,7 +183,7 @@
 }
 
 div.ppls {
-	font-family:Arial, "Î¢ÈíÑÅºÚ", "ºÚÌå", Helvetica, sans-serif;
+	font-family:Arial, "Î¢ï¿½ï¿½ï¿½Åºï¿½", "ï¿½ï¿½ï¿½ï¿½", Helvetica, sans-serif;
 	float:left;
 	width:108px;
 	margin:4px;
@@ -234,7 +234,7 @@ div.inf p {
 }
 
 .nm {
-	font-family:Times, "Times New Roman", Georgia, "ĞÂËÎÌå", "ËÎÌå", serif;
+	font-family:Times, "Times New Roman", Georgia, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", serif;
 	font-weight:bold;
 	line-height:normal;
 }
@@ -246,7 +246,7 @@ ol li {
 li em {
 	font-weight:bold;
 	color:#992299;
-	font-family:Arial, "Î¢ÈíÑÅºÚ", "ºÚÌå", Helvetica, sans-serif;
+	font-family:Arial, "Î¢ï¿½ï¿½ï¿½Åºï¿½", "ï¿½ï¿½ï¿½ï¿½", Helvetica, sans-serif;
 }
 
 a.pb {

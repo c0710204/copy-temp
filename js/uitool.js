@@ -124,3 +124,40 @@ $(document).ready(function () {
     self = urls['f'];
     loader(urls['f']);
 });
+
+
+
+
+
+//#******************uitool**************
+function loadtheme(theme){
+   $.getJSON('theme/theme.json','',function(obj,status){
+       for(t in obj)
+       {
+           if (obj[t].name==theme){
+               for(u in obj[t].path)
+               {
+                   loadcss(obj[t].path[u],'theme/'+obj[t].name  +'/');
+               }
+           }
+       }
+
+   });
+}
+function loadcss(url,theme){
+    uri=url.replace(/\//g,"_").replace(/\./g,"-");
+    uriid='.css-placer #'+uri;
+    if ($(uriid)) $(uriid).remove();
+    $('.css-placer').html($('.css-placer').html()+
+        '<link rel="StyleSheet" id="'+uri+'" href="'+theme+url+'" type="text/css">'
+    );
+}
+function unloadcss(url){
+    uri=url.replace(/\//g,"_").replace(/\./g,"-");
+    uriid='.css-placer #'+uri;
+    if ($(uriid)) $(uriid).remove();
+}
+$(document).ready(function(){
+loadtheme('theme1');
+});
+//***************************************

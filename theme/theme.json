@@ -1,0 +1,16 @@
+[
+    {
+        "name":"theme1",
+        "path":[
+            "/css/comm.css",
+            "/css/subs.css"
+        ]
+    },
+    {
+        "name":"theme2",
+        "path":[
+            "/css/comm.css",
+            "/css/subs.css"
+        ]
+    }
+]
